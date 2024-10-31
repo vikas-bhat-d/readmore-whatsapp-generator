@@ -3,12 +3,12 @@ import './App.css'
 
 function App() {
   
-  let zeroWidthString='\u200B'.repeat(4000);
+  let zeroWidthString='\u200B'.repeat(6000);
   const [beforeText,setBeforeText]=useState('')
   const [afterText,setAfterText]=useState('')
   const [generatedText,setGeneratedText]=useState(zeroWidthString);
   useEffect(()=>{
-    let newGeneratedText=beforeText+zeroWidthString+afterText;
+    let newGeneratedText=beforeText+zeroWidthString+"\n"+ afterText;
     setGeneratedText(newGeneratedText)
   },[beforeText,afterText])
 
